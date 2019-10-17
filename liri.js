@@ -1,17 +1,4 @@
-// require('dotenv').config();
 
-// require("dotenv").config();
-
-// var keys = require("./keys.js");
-
-// var spotify = new Spotify(keys.spotify);
-
-// var axios = require("axios");
-
-// omdb api key http://www.omdbapi.com/?i=tt3896198&apikey=c967913a
-
-//Client ID 3d23a101142b43bcb1baaf2b46374b6d
-//Client Secret 118eb37f12734df88f0009884b623f07
 
 require("dotenv").config();
 
@@ -27,7 +14,7 @@ var axios = require('axios');
 var fs = require('fs'); 
 
 var arg1 = process.argv[2]; 
-var arg2 = process.argv[3]; 
+var arg2 = process.argv.slice(3).join(" "); 
 
 if (arg1 == "concert-this") {
     concertThis(arg2);
